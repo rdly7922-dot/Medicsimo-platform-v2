@@ -8,9 +8,9 @@
 
 import React from "react";
 import { Award } from "lucide-react";
-import { useClinic }      from "../context/ClinicContext";
-import { useTranslation } from "../hooks/useTranslation";
-import { GlassPanel }     from "../components/ui/ui";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { GlassPanel } from "./ui";
 
 const POINT_OPTIONS = [10, 25, 50];
 
