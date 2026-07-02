@@ -9,11 +9,11 @@
 
 import React, { useState, useEffect } from "react";
 import { Sparkles, AlertTriangle, Star } from "lucide-react";
-import { useClinic }      from "../context/ClinicContext";
-import { useTranslation } from "../hooks/useTranslation";
-import { GlassPanel, StarRow } from "../components/ui/ui";
-import { SURVEY_STATS, NEGATIVE_REVIEW } from "../constants/seedData";
-import { loadStored, saveStored, tenantKey } from "../utils/storage";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { GlassPanel, StarRow } from "./ui";
+import { SURVEY_STATS, NEGATIVE_REVIEW } from "./seedData";
+import { loadStored, saveStored, tenantKey } from "./storage";
 
 /* ── AI priority scorer (keyword heuristic matching original logic) ───────── */
 function scorePriority(text) {
