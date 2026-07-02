@@ -15,39 +15,39 @@
  */
 
 import React, { lazy, Suspense } from "react";
-import { useClinic }      from "../../context/ClinicContext";
-import { useTranslation } from "../../hooks/useTranslation";
-import { useTranslation as useTrans } from "../../hooks/useTranslation";
+import { useClinic }            from "./ClinicContext";
+import { useTranslation }       from "./useTranslation";
+import { useTranslation as useTrans } from "./useTranslation";
 
 import Sidebar from "./Sidebar";
 import Header  from "./Header";
 
-// ── Lazy-load every view ─────────────────────────────────────────────────────
-const OverviewView         = lazy(() => import("../../views/OverviewView"));
-const PatientsView         = lazy(() => import("../../views/PatientsView"));
-const BookingsView         = lazy(() => import("../../views/BookingsView"));
-const LoyaltyView          = lazy(() => import("../../views/LoyaltyView"));
-const AIIntelligenceView   = lazy(() => import("../../views/AIIntelligenceView"));
-const ExecutiveReportView  = lazy(() => import("../../views/ExecutiveReportView"));
-const InventoryView        = lazy(() => import("../../views/InventoryView"));
-const PlatformSettingsView = lazy(() => import("../../views/PlatformSettingsView"));
+// --- Lazy-load every view --------------------------------------------------
+const OverviewView           = lazy(() => import("./OverviewView"));
+const PatientsView           = lazy(() => import("./PatientsView"));
+const BookingsView           = lazy(() => import("./BookingsView"));
+const LoyaltyView            = lazy(() => import("./LoyaltyView"));
+const AIIntelligenceView     = lazy(() => import("./AIIntelligenceView"));
+const ExecutiveReportView    = lazy(() => import("./ExecutiveReportView"));
+const InventoryView          = lazy(() => import("./InventoryView"));
+const PlatformSettingsView   = lazy(() => import("./PlatformSettingsView"));
 
-// ── Lazy-load all modals ─────────────────────────────────────────────────────
-const PasscodeModal = lazy(() => import("../modals/PasscodeModal"));
+// --- Lazy-load all modals --------------------------------------------------
+const PasscodeModal = lazy(() => import("./PasscodeModal"));
 const {
   SettingsModal, CheckoutModal, PatientFormModal, BookingFormModal,
   ExpenseFormModal, InventoryFormModal, FeedbackModal, DeleteConfirmModal,
-} = await import("../modals/AppModals").catch(() => ({}));
+} = await import("./AppModals").catch(() => ({}));
 
 // Non-async re-import pattern for lazy (workaround for named exports + lazy)
-const LazySettingsModal   = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.SettingsModal   })));
-const LazyCheckoutModal   = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.CheckoutModal   })));
-const LazyPatientForm     = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.PatientFormModal })));
-const LazyBookingForm     = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.BookingFormModal })));
-const LazyExpenseForm     = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.ExpenseFormModal })));
-const LazyInventoryForm   = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.InventoryFormModal })));
-const LazyFeedbackModal   = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.FeedbackModal   })));
-const LazyDeleteConfirm   = lazy(() => import("../modals/AppModals").then((m) => ({ default: m.DeleteConfirmModal })));
+const LazySettingsModal    = lazy(() => import("./AppModals").then((m) => ({ default: m.SettingsModal })));
+const LazyCheckoutModal    = lazy(() => import("./AppModals").then((m) => ({ default: m.CheckoutModal })));
+const LazyPatientForm      = lazy(() => import("./AppModals").then((m) => ({ default: m.PatientFormModal })));
+const LazyBookingForm      = lazy(() => import("./AppModals").then((m) => ({ default: m.BookingFormModal })));
+const LazyExpenseForm      = lazy(() => import("./AppModals").then((m) => ({ default: m.ExpenseFormModal })));
+const LazyInventoryForm    = lazy(() => import("./AppModals").then((m) => ({ default: m.InventoryFormModal })));
+const LazyFeedbackModal    = lazy(() => import("./AppModals").then((m) => ({ default: m.FeedbackModal })));
+const LazyDeleteConfirm    = lazy(() => import("./AppModals").then((m) => ({ default: m.DeleteConfirmModal })));
 
 /** Lightweight spinner shown while a lazy chunk loads */
 function ViewLoader() {
