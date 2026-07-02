@@ -21,11 +21,11 @@ import {
   Tooltip, ResponsiveContainer,
 } from "recharts";
 
-import { useClinic }       from "../context/ClinicContext";
-import { useTranslation }  from "../hooks/useTranslation";
-import { fmtIQD }          from "../utils/formatters";
-import { GlassPanel, StatCard, Lockable, ProgressBar } from "../components/ui/ui";
-import { CATEGORY_KEYS, TOTAL_REVENUE, buildTrendData } from "../constants/seedData";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { fmtIQD } from "./formatters";
+import { GlassPanel, StatCard, Lockable, ProgressBar } from "./ui";
+import { CATEGORY_KEYS, TOTAL_REVENUE, buildTrendData } from "./seedData";
 
 /* ── Expense category icon map ───────────────────────────────────────────── */
 const CATEGORY_ICONS = {
