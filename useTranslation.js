@@ -11,8 +11,8 @@
  */
 
 import { useEffect } from "react";
-import { useClinic } from "../context/ClinicContext";
-import { t as tFn, isRtl as isRtlFn } from "../utils/i18n";
+import { useClinic } from "./ClinicContext";
+import { t as tFn, isRtl as isRtlFn } from "./i18n";
 
 export function useTranslation() {
   const { lang } = useClinic();
