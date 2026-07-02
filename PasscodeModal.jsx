@@ -3,9 +3,9 @@
  */
 import React, { useState } from "react";
 import { KeyRound, X } from "lucide-react";
-import { useClinic }      from "../../context/ClinicContext";
-import { useTranslation } from "../../hooks/useTranslation";
-import { GlassPanel }     from "../ui/ui";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { GlassPanel } from "./ui";
 
 export default function PasscodeModal() {
   const { setShowPasscodeModal, submitPasscode, submitRecovery,
