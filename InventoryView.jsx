@@ -8,9 +8,9 @@
 
 import React, { useMemo } from "react";
 import { Warehouse, Plus, Pencil, Trash2 } from "lucide-react";
-import { useClinic }      from "../context/ClinicContext";
-import { useTranslation } from "../hooks/useTranslation";
-import { GlassPanel }     from "../components/ui/ui";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { GlassPanel } from "./ui";
 
 function stockStatus(item) {
   const today = new Date().toISOString().slice(0, 10);
