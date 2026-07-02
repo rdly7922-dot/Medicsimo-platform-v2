@@ -24,8 +24,8 @@ import {
   ChevronRight,
   ShieldCheck,
 } from "lucide-react";
-import { useClinic } from "../../context/ClinicContext";
-import { useTranslation } from "../../hooks/useTranslation";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
 
 export default function Sidebar() {
   const { view, setView, tenantId, switchTenant, lang } = useClinic();
