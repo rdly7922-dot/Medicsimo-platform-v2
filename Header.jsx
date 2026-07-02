@@ -14,9 +14,9 @@
 
 import React from "react";
 import { Search, Lock, Settings, UserCog } from "lucide-react";
-import { useClinic } from "../../context/ClinicContext";
-import { useTranslation } from "../../hooks/useTranslation";
-import { LANGS } from "../../utils/i18n";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { LANGS } from "./i18n";
 
 export default function Header() {
   const {
