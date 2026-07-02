@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── RTL logical property shims for older Safari ────────────────────────── */
+@layer utilities {
+  .ps-3  { padding-inline-start: 0.75rem; }
+  .pe-3  { padding-inline-end:   0.75rem; }
+  .ms-auto { margin-inline-start: auto; }
+  .me-2  { margin-inline-end: 0.5rem; }
+  .start-3 { inset-inline-start: 0.75rem; }
+  .border-s { border-inline-start-width: 1px; }
+  .border-e { border-inline-end-width:   1px; }
+}
+
+/* ── Global base ─────────────────────────────────────────────────────────── */
+html {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Arabic & Kurdish characters render better with slightly looser tracking */
+[lang="ar"], [lang="bad"], [lang="sor"] {
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
