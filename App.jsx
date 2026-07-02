@@ -14,10 +14,11 @@
 
 import React from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient }         from "./lib/queryClient";
-import { ClinicProvider, useClinic } from "./context/ClinicContext";
-import DashboardLayout from "./components/layout/DashboardLayout";
-import TenantGate      from "./components/layout/TenantGate";
+import { queryClient }            from "./queryClient";
+import { ClinicProvider, useClinic } from "./ClinicContext";
+import DashboardLayout            from "./DashboardLayout";
+import TenantGate                 from "./TenantGate";
+
 
 function AppShell() {
   const { tenantId, tenantResolved } = useClinic();
