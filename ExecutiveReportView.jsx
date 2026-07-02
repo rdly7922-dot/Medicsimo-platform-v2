@@ -8,11 +8,11 @@
 
 import React, { useMemo } from "react";
 import { BarChart3, TrendingUp, TrendingDown, Minus } from "lucide-react";
-import { useClinic }      from "../context/ClinicContext";
-import { useTranslation } from "../hooks/useTranslation";
-import { fmtIQD }         from "../utils/formatters";
-import { GlassPanel, Lockable, StarRow } from "../components/ui/ui";
-import { TOTAL_REVENUE, CATEGORY_KEYS } from "../constants/seedData";
+import { useClinic } from "./ClinicContext";
+import { useTranslation } from "./useTranslation";
+import { fmtIQD } from "./formatters";
+import { GlassPanel, Lockable, StarRow } from "./ui";
+import { TOTAL_REVENUE, CATEGORY_KEYS } from "./seedData";
 
 export default function ExecutiveReportView() {
   const { role, expenses, totalExpenses, reviews } = useClinic();
