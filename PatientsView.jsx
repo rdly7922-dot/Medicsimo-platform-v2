@@ -13,12 +13,12 @@ import {
   Receipt, Pill, HeartPulse, ScanLine, FileText, X, Pencil, Trash2,
 } from "lucide-react";
 
-import { useClinic }      from "../context/ClinicContext";
-import { useTranslation } from "../hooks/useTranslation";
-import { fmtIQD }         from "../utils/formatters";
-import { buildWhatsAppLink } from "../utils/webhooks";
-import { GlassPanel, StatusDot, Lockable, ProgressBar } from "../components/ui/ui";
-import { SURVEY_LINK_PLACEHOLDER } from "../constants/seedData";
+import { useClinic }            from "./ClinicContext";
+import { useTranslation }       from "./useTranslation";
+import { fmtIQD }               from "./formatters";
+import { buildWhatsAppLink }    from "./webhooks";
+import { GlassPanel, StatusDot, Lockable, ProgressBar } from "./ui";
+import { SURVEY_LINK_PLACEHOLDER } from "./seedData";
 
 /* ── Tag chip section inside profile ────────────────────────────────────── */
 function TagSection({ title, icon: Icon, tags, color, onAdd, onRemove }) {
