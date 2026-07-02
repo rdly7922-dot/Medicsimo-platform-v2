@@ -32,10 +32,10 @@ import {
   INITIAL_BOOKINGS,
   INITIAL_INVENTORY,
   ACTIVE_TENANT_KEY,
-} from "../constants/seedData";
+} from "./seedData";
 
-import { loadStored, saveStored, sanitizeTenantId, tenantKey } from "../utils/storage";
-import { notifyWebhook } from "../utils/webhooks";
+import { loadStored, saveStored, sanitizeTenantId, tenantKey } from "./storage";
+import { notifyWebhook } from "./webhooks";
 
 /* ─────────────────────────────────────────────────────────────────────────── */
 /*  Context creation                                                           */
